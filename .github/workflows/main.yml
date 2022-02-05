@@ -2,28 +2,28 @@
 #Example name: Deploy HTML Files to AppService - Coursename
 name: Deploy HTML Files to AppService - CMST385
 on:
-	Push:
-		branches:
-			-main
+Push:
+branches:
+-main
 
 jobs:
-	build-and-deploy:
-		runs-on: windows-latest
+build-and-deploy:
+runs-on: windows-latest
 		
-		steps:
-		-uses: actions/checkout@main
+steps:
+-uses: actions/checkout@main
 			
-		-name: Deploy to Azure Web App
-		uses: azure/webapps-deploy@v1
+-name: Deploy to Azure Web App
+uses: azure/webapps-deploy@v1
 			
-		with:
+with:
 			
-		#change the app-name to match what was provided to you in the punlish setings file, this is in a naming convention of 'COURSENAME-STUDENTUID'
+#change the app-name to match what was provided to you in the punlish setings file, this is in a naming convention of 'COURSENAME-STUDENTUID'
 			
-			app-name:'cmst385cmcghee8'
+app-name:'cmst385cmcghee8'
 				
-			slot-name: 'production'
+slot-name: 'production'
 				
-		#Change the publish profile to match what you named your secret setup in Github, Example shown below
+#Change the publish profile to match what you named your secret setup in Github, Example shown below
 				
 			publish-profile: ${{ secrets.AppserviceCMST385}}
