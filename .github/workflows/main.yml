@@ -18,12 +18,8 @@ uses: azure/webapps-deploy@v1
 			
 with:
 			
-#change the app-name to match what was provided to you in the punlish setings file, this is in a naming convention of 'COURSENAME-STUDENTUID'
-			
-app-name:'cmst385cmcghee8'
-				
-slot-name: 'production'
-				
-#Change the publish profile to match what you named your secret setup in Github, Example shown below
-				
-			publish-profile: ${{ secrets.AppserviceCMST385}}
+#change the app-name to match what was provided to you in the punlish setings file, this is in a naming convention of 'COURSENAME-STUDENTUID'			
+app-name:'cmst385cmcghee8'				
+slot-name: 'production'				
+#Change the publish profile to match what you named your secret setup in Github, Example shown below				
+publish-profile: ${{ secrets.AppserviceCMST385}}
